@@ -1,192 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta name="description"
+    content="Conheça a Monte Ambiental — equipe de consultoria ambiental qualificada, comprometida com soluções sustentáveis e em conformidade com a legislação." />
+  <meta name="author" content="Monte Ambiental" />
+  <title>Sobre Nós — Monte Ambiental</title>
 
-  <title>Monte Ambiental</title>
+  <link rel="icon" href="images/logo.png" />
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/theme.config.js"></script>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="css/theme.css" rel="stylesheet" />
 </head>
 
-<body class="sub_page">
+<body class="bg-slate-50 text-slate-900 antialiased">
 
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo2.png" alt="">
-            <span>
-              Monte Ambiental
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="s-1"> </span>
-            <span class="s-2"> </span>
-            <span class="s-3"> </span>
-          </button>
+  <!-- ============================ HEADER ============================ -->
+  <header data-header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md transition-shadow">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="images/logo2.png" alt="" class="h-9 w-9 rounded-lg object-contain" />
+        <span class="text-lg font-extrabold tracking-tight text-slate-900">Monte Ambiental</span>
+      </a>
+      <ul class="hidden items-center gap-9 lg:flex">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link is-active">Sobre Nós</a></li>
+        <li><a href="service.html" class="nav-link">Serviços</a></li>
+        <li><a href="contact.html" class="nav-link">Contato</a></li>
+      </ul>
+      <div class="hidden lg:block">
+        <a href="https://api.whatsapp.com/send/?phone=%2B5582982010776" class="btn btn-primary">
+          Fale Conosco <i data-lucide="arrow-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+      <button data-nav-toggle type="button" aria-expanded="false" aria-controls="mobile-menu"
+        aria-label="Abrir menu de navegação"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 text-slate-700 lg:hidden">
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" data-nav-menu class="hidden border-t border-slate-200 bg-white px-4 py-4 lg:hidden">
+      <ul class="flex flex-col gap-1">
+        <li><a href="index.html" class="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-slate-50">Home</a></li>
+        <li><a href="about.html" class="block rounded-lg px-3 py-2.5 font-medium text-indigo-600 bg-indigo-50">Sobre Nós</a></li>
+        <li><a href="service.html" class="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-slate-50">Serviços</a></li>
+        <li><a href="contact.html" class="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-slate-50">Contato</a></li>
+        <li class="pt-2"><a href="https://api.whatsapp.com/send/?phone=%2B5582982010776" class="btn btn-primary w-full">Fale Conosco</a></li>
+      </ul>
+    </div>
+  </header>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="about.html"> Sobre Nós</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="service.html">Serviços</a>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contato</a>
-                </li>
-              </ul>
+  <main>
+    <!-- ============================ PAGE HERO ============================ -->
+    <section class="relative overflow-hidden border-b border-slate-200 bg-white">
+      <div class="blob -left-24 -top-28 h-80 w-80 bg-indigo-200"></div>
+      <div class="blob right-0 -top-10 h-72 w-72 bg-violet-200 opacity-40"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-14 text-center sm:px-6 lg:py-20">
+        <span class="badge"><i data-lucide="users" class="h-4 w-4"></i> Quem somos</span>
+        <h1 class="mt-5 text-4xl font-extrabold tracking-headline text-slate-900 sm:text-5xl">
+          Sobre <span class="text-gradient">Nós</span>
+        </h1>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-500">
+          Consultoria ambiental comprometida com um futuro mais saudável e próspero para todos.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ STORY ============================ -->
+    <section class="py-16 lg:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
+        <div class="scene relative order-last lg:order-first">
+          <div class="iso">
+            <div class="card-soft overflow-hidden rounded-2xl">
+              <img src="images/estudo.jpg" alt="Equipe da Monte Ambiental em estudo de campo"
+                class="aspect-[4/3] w-full object-cover" loading="lazy" />
+            </div>
+            <div class="card-soft absolute -bottom-10 -right-4 w-2/5 overflow-hidden rounded-2xl sm:-right-8">
+              <img src="images/reciclar.jpg" alt="Gestão de resíduos e reciclagem"
+                class="aspect-square w-full object-cover" loading="lazy" />
             </div>
           </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
+        </div>
 
-
-
-  <!-- about section -->
-  <section class="about_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                Sobre Nós
-              </h2>
-            </div>
+        <div>
+          <span class="eyebrow">Nossa história</span>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-headline text-slate-900 sm:text-4xl">
+            Especialistas em <span class="text-gradient">soluções sustentáveis</span>
+          </h2>
+          <div class="mt-5 space-y-4 text-lg leading-relaxed text-slate-500">
             <p>
-              Somos uma empresa de consultoria ambiental comprometida com a promoção de soluções ambientalmente sustentáveis para nossos clientes. Nossa equipe é composta por profissionais altamente qualificados e experientes em diversas áreas da ciência ambiental. <p>
-              Temos como objetivo oferecer serviços de alta qualidade e personalizados que atendam às necessidades específicas de cada cliente. Com um profundo conhecimento das leis e regulamentos ambientais, trabalhamos em estreita colaboração com nossos clientes para garantir que suas atividades sejam conduzidas de forma ambientalmente responsável e em conformidade com os requisitos legais. <p>
-              Nossa missão é ajudar nossos clientes a alcançarem seus objetivos de negócio de forma ambientalmente responsável e sustentável, contribuindo para um futuro mais saudável e próspero para todos.
+              Somos uma empresa de consultoria ambiental comprometida com a promoção de soluções
+              ambientalmente sustentáveis para nossos clientes. Nossa equipe é composta por
+              profissionais altamente qualificados e experientes em diversas áreas da ciência
+              ambiental.
+            </p>
+            <p>
+              Temos como objetivo oferecer serviços de alta qualidade e personalizados que atendam
+              às necessidades específicas de cada cliente. Com profundo conhecimento das leis e
+              regulamentos ambientais, trabalhamos em estreita colaboração para garantir atividades
+              ambientalmente responsáveis e em conformidade com os requisitos legais.
+            </p>
+            <p>
+              Nossa missão é ajudar nossos clientes a alcançarem seus objetivos de negócio de forma
+              ambientalmente responsável e sustentável, contribuindo para um futuro mais saudável e
+              próspero para todos.
             </p>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="img_container">
-            <div class="img-box b1">
-              <img src="images/estudo.jpg" alt="" />
-            </div>
-            <div class="img-box b2">
-              <img src="images/reciclar.jpg" alt="" />
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-  <!-- info section -->
-
-  <section class="info_section layout_padding">
-    <div class="container">
-      <div class="info_contact">
-        <div class="row">
-          <div class="col-md-4">
-            <a href="https://api.whatsapp.com/send/?phone=%2B5582982010776">
-              <img src="images/telephone-white.png" alt="">
-              <span>
-                Telefone : (82) 98201-0776
-              </span>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a href="mailto:comercial@monteambiental.com">
-              <img src="images/envelope-white.png" alt="">
-              <span>
-                comercial@monteambiental.com
-              </span>
-            </a>
-          </div>
+          <a href="contact.html" class="btn btn-primary mt-9">
+            Fale com a nossa equipe <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-8 col-lg-9">
-          <div class="info_form">
-            <form action="">
-              <input type="text" placeholder="Digite seu e-mail">
-              <button>
-                Inscreva-se
-              </button>
-            </form>
-          </div>
+    </section>
+
+    <!-- ============================ VALUES ============================ -->
+    <section class="bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="eyebrow">Nossos valores</span>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-headline text-slate-900 sm:text-4xl">
+            O que nos move
+          </h2>
         </div>
-        <div class="col-md-4 col-lg-3">
-          <div class="info_social">
-            <div>
-              <a href="https://www.facebook.com/people/Monte-Ambiental/100084219861188/">
-                <img src="images/fb.png" alt="">
-              </a>
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <article class="card-soft p-7">
+            <span class="feature-icon"><i data-lucide="badge-check" class="h-7 w-7"></i></span>
+            <h3 class="mt-5 text-lg font-semibold text-slate-900">Qualidade e personalização</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">
+              Serviços de alta qualidade desenhados para as necessidades específicas de cada cliente.
+            </p>
+          </article>
+          <article class="card-soft p-7">
+            <span class="feature-icon"><i data-lucide="scale" class="h-7 w-7"></i></span>
+            <h3 class="mt-5 text-lg font-semibold text-slate-900">Conformidade legal</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">
+              Profundo conhecimento das leis e regulamentos para manter cada atividade em conformidade.
+            </p>
+          </article>
+          <article class="card-soft p-7">
+            <span class="feature-icon"><i data-lucide="sprout" class="h-7 w-7"></i></span>
+            <h3 class="mt-5 text-lg font-semibold text-slate-900">Responsabilidade ambiental</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">
+              Compromisso com um futuro mais saudável, equilibrando crescimento e sustentabilidade.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CTA / NEWSLETTER ============================ -->
+    <section class="px-4 py-16 sm:px-6 lg:py-24">
+      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900 to-indigo-950 px-6 py-14 sm:px-12 lg:py-20">
+        <div class="blob -right-16 -top-16 h-72 w-72 bg-indigo-500 opacity-40"></div>
+        <div class="blob -bottom-20 left-1/3 h-72 w-72 bg-violet-500 opacity-30"></div>
+        <div class="relative grid items-center gap-10 lg:grid-cols-2">
+          <div>
+            <h2 class="text-3xl font-extrabold tracking-headline text-white sm:text-4xl">
+              Vamos cuidar do ambiental do seu negócio?
+            </h2>
+            <p class="mt-4 max-w-md text-lg text-indigo-200">
+              Fale com a nossa equipe e descubra a solução ideal para o seu empreendimento.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="https://api.whatsapp.com/send/?phone=%2B5582982010776" class="btn btn-light">Fale Conosco</a>
+              <a href="service.html" class="btn btn-secondary border-white/20 bg-white/10 text-white hover:bg-white/20">Ver serviços</a>
             </div>
-            <div>
-              <a href="https://www.linkedin.com/company/monte-ambiental/">
-                <img src="images/linkedin.png" alt="">
-              </a>
-            </div>
-            <div>
-              <a href="https://www.instagram.com/monteambiental/">
-                <img src="images/instagram.png" alt="">
-              </a>
+          </div>
+          <div class="lg:justify-self-end">
+            <p class="text-sm font-semibold uppercase tracking-wide text-indigo-300">Siga a Monte Ambiental</p>
+            <div class="mt-4 flex gap-3">
+              <a href="https://www.facebook.com/people/Monte-Ambiental/100084219861188/" aria-label="Facebook" class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-colors hover:bg-white/20"><i data-lucide="facebook" class="h-5 w-5"></i></a>
+              <a href="https://www.linkedin.com/company/monte-ambiental/" aria-label="LinkedIn" class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-colors hover:bg-white/20"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+              <a href="https://www.instagram.com/monteambiental/" aria-label="Instagram" class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-colors hover:bg-white/20"><i data-lucide="instagram" class="h-5 w-5"></i></a>
             </div>
           </div>
         </div>
       </div>
+    </section>
+  </main>
 
-    </div>
-  </section>
-
-  <!-- end info section -->
-
-  <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 col-md-9 mx-auto">
-          <p>
-            © Copyright 2023 Monte Ambiental
-          </p>
-        </div>
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="images/logo2.png" alt="" class="h-8 w-8 rounded-lg object-contain" />
+        <span class="font-extrabold tracking-tight text-slate-900">Monte Ambiental</span>
+      </a>
+      <p class="text-sm text-slate-500">© 2023 Monte Ambiental. Todos os direitos reservados.</p>
+      <div class="flex gap-2 text-slate-400">
+        <a href="https://www.facebook.com/people/Monte-Ambiental/100084219861188/" aria-label="Facebook" class="transition-colors hover:text-indigo-600"><i data-lucide="facebook" class="h-5 w-5"></i></a>
+        <a href="https://www.linkedin.com/company/monte-ambiental/" aria-label="LinkedIn" class="transition-colors hover:text-indigo-600"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+        <a href="https://www.instagram.com/monteambiental/" aria-label="Instagram" class="transition-colors hover:text-indigo-600"><i data-lucide="instagram" class="h-5 w-5"></i></a>
       </div>
     </div>
   </footer>
-  <!-- footer section -->
 
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
