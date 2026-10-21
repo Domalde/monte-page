@@ -1,0 +1,19 @@
+/* Alagoas Saneamento: base comum (reset leve, corpo, links, foco, texto só para leitor de tela). */
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{margin:0;font-family:var(--font);font-size:.875rem;line-height:1.5;background:var(--bg-page);color:var(--ink)}
+a{color:var(--acento);text-underline-offset:2px}
+/* superfícies do navegador na paleta do portal: seleção, cursor de texto, controles nativos e barra de rolagem */
+::selection{background:var(--acento-bg);color:var(--txt)}
+html{accent-color:var(--acento);caret-color:var(--acento);scrollbar-color:var(--borda-forte) transparent}
+button,input,select,textarea{font-family:inherit;font-size:.875rem;line-height:1.5}
+/* no celular, campos com 16px: abaixo disso o iOS dá zoom na página ao tocar */
+@media(max-width:640px){input:not([type=checkbox]):not([type=radio]),select,textarea{font-size:max(1rem,1em)!important}}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  /* sem deslocamento nem mudança de tamanho; trocas de cor e opacidade continuam, curtas, para mostrar o estado */
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-property:color,background-color,border-color,opacity,box-shadow,outline-color!important;transition-duration:.12s!important}
+}
