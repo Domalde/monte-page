@@ -1,192 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description"
-    content="Fale com a Monte Ambiental. Entre em contato por telefone, e-mail ou WhatsApp e receba uma proposta de consultoria ambiental sob medida." />
-  <meta name="author" content="Monte Ambiental" />
-  <title>Contato — Monte Ambiental</title>
-
-  <link rel="icon" href="images/logo.png" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/theme.config.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="css/theme.css" rel="stylesheet" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contato | Monte Ambiental</title>
+<meta name="description" content="Fale com a Monte Ambiental por WhatsApp, e-mail ou formulário e receba uma proposta sob medida.">
+<meta name="theme-color" content="#09090B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contato | Monte Ambiental">
+<meta property="og:description" content="Fale com a Monte Ambiental por WhatsApp, e-mail ou formulário e receba uma proposta sob medida.">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-tema',t)}catch(e){}</script>
 </head>
-
-<body class="bg-slate-50 text-slate-900 antialiased">
-
-  <!-- ============================ HEADER ============================ -->
-  <header data-header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md transition-shadow">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <img src="images/logo2.png" alt="" class="h-9 w-9 rounded-lg object-contain" />
-        <span class="text-lg font-extrabold tracking-tight text-slate-900">Monte Ambiental</span>
-      </a>
-      <ul class="hidden items-center gap-9 lg:flex">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">Sobre Nós</a></li>
-        <li><a href="service.html" class="nav-link">Serviços</a></li>
-        <li><a href="contact.html" class="nav-link is-active">Contato</a></li>
-      </ul>
-      <div class="hidden lg:block">
-        <a href="https://api.whatsapp.com/send/?phone=%2B5582982010776" class="btn btn-primary">
-          Fale Conosco <i data-lucide="arrow-right" class="h-4 w-4"></i>
-        </a>
-      </div>
-      <button data-nav-toggle type="button" aria-expanded="false" aria-controls="mobile-menu"
-        aria-label="Abrir menu de navegação"
-        class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 text-slate-700 lg:hidden">
-        <i data-lucide="menu" class="h-5 w-5"></i>
-      </button>
-    </nav>
-    <div id="mobile-menu" data-nav-menu class="hidden border-t border-slate-200 bg-white px-4 py-4 lg:hidden">
-      <ul class="flex flex-col gap-1">
-        <li><a href="index.html" class="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-slate-50">Home</a></li>
-        <li><a href="about.html" class="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-slate-50">Sobre Nós</a></li>
-        <li><a href="service.html" class="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-slate-50">Serviços</a></li>
-        <li><a href="contact.html" class="block rounded-lg px-3 py-2.5 font-medium text-indigo-600 bg-indigo-50">Contato</a></li>
-        <li class="pt-2"><a href="https://api.whatsapp.com/send/?phone=%2B5582982010776" class="btn btn-primary w-full">Fale Conosco</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main>
-    <!-- ============================ PAGE HERO ============================ -->
-    <section class="relative overflow-hidden border-b border-slate-200 bg-white">
-      <div class="blob -left-24 -top-28 h-80 w-80 bg-indigo-200"></div>
-      <div class="blob right-0 -top-10 h-72 w-72 bg-violet-200 opacity-40"></div>
-      <div class="relative mx-auto max-w-7xl px-4 py-14 text-center sm:px-6 lg:py-20">
-        <span class="badge"><i data-lucide="message-circle" class="h-4 w-4"></i> Fale com a gente</span>
-        <h1 class="mt-5 text-4xl font-extrabold tracking-headline text-slate-900 sm:text-5xl">
-          Fale <span class="text-gradient">Conosco</span>
-        </h1>
-        <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-500">
-          Conte o seu desafio ambiental. Respondemos com uma proposta sob medida para a sua empresa.
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================ CONTACT ============================ -->
-    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
-      <div class="grid gap-8 lg:grid-cols-2">
-        <!-- Form -->
-        <div class="card-soft p-7 sm:p-9">
-          <h2 class="text-xl font-bold text-slate-900">Envie uma mensagem</h2>
-          <p class="mt-1 text-sm text-slate-500">Preencha o formulário e retornaremos o mais breve possível.</p>
-          <form action="" class="mt-7 space-y-5">
-            <div class="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label for="nome" class="field-label">Nome</label>
-                <input id="nome" name="nome" type="text" class="field-input" placeholder="Seu nome" />
-              </div>
-              <div>
-                <label for="telefone" class="field-label">Telefone</label>
-                <input id="telefone" name="telefone" type="tel" class="field-input" placeholder="(00) 00000-0000" />
-              </div>
-            </div>
-            <div>
-              <label for="email" class="field-label">Email</label>
-              <input id="email" name="email" type="email" class="field-input" placeholder="voce@empresa.com" />
-            </div>
-            <div>
-              <label for="mensagem" class="field-label">Mensagem</label>
-              <textarea id="mensagem" name="mensagem" rows="5" class="field-input" placeholder="Como podemos ajudar?"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-full">
-              Enviar mensagem <i data-lucide="send" class="h-4 w-4"></i>
-            </button>
-          </form>
-        </div>
-
-        <!-- Info + map -->
-        <div class="flex flex-col gap-6">
-          <a href="https://api.whatsapp.com/send/?phone=%2B5582982010776" class="card-soft flex items-center gap-4 p-6">
-            <span class="feature-icon"><i data-lucide="phone" class="h-6 w-6"></i></span>
-            <span>
-              <span class="block text-sm font-medium text-slate-500">Telefone / WhatsApp</span>
-              <span class="block text-lg font-semibold text-slate-900">(82) 98201-0776</span>
-            </span>
-          </a>
-          <a href="mailto:comercial@monteambiental.com" class="card-soft flex items-center gap-4 p-6">
-            <span class="feature-icon"><i data-lucide="mail" class="h-6 w-6"></i></span>
-            <span class="min-w-0">
-              <span class="block text-sm font-medium text-slate-500">Email</span>
-              <span class="block truncate text-lg font-semibold text-slate-900">comercial@monteambiental.com</span>
-            </span>
-          </a>
-          <div class="card-soft overflow-hidden p-0">
-            <iframe title="Localização da Monte Ambiental no mapa"
-              src="https://maps.google.com/maps?q=monte%20ambiental&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              class="h-72 w-full border-0" loading="lazy" allowfullscreen></iframe>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-sm font-semibold text-slate-700">Siga-nos:</span>
-            <a href="https://www.facebook.com/people/Monte-Ambiental/100084219861188/" aria-label="Facebook" class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-slate-400 shadow-soft transition-colors hover:text-indigo-600"><i data-lucide="facebook" class="h-5 w-5"></i></a>
-            <a href="https://www.linkedin.com/company/monte-ambiental/" aria-label="LinkedIn" class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-slate-400 shadow-soft transition-colors hover:text-indigo-600"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
-            <a href="https://www.instagram.com/monteambiental/" aria-label="Instagram" class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-slate-400 shadow-soft transition-colors hover:text-indigo-600"><i data-lucide="instagram" class="h-5 w-5"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ CTA / NEWSLETTER ============================ -->
-    <section class="px-4 pb-16 sm:px-6 lg:pb-24">
-      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900 to-indigo-950 px-6 py-14 sm:px-12 lg:py-20">
-        <div class="blob -right-16 -top-16 h-72 w-72 bg-indigo-500 opacity-40"></div>
-        <div class="blob -bottom-20 left-1/3 h-72 w-72 bg-violet-500 opacity-30"></div>
-        <div class="relative grid items-center gap-10 lg:grid-cols-2">
-          <div>
-            <h2 class="text-3xl font-extrabold tracking-headline text-white sm:text-4xl">
-              Receba conteúdos sobre gestão ambiental
-            </h2>
-            <p class="mt-4 max-w-md text-lg text-indigo-200">
-              Inscreva-se para acompanhar novidades em licenciamento, resíduos e conformidade.
-            </p>
-            <form action="" class="mt-8 flex flex-col gap-3 sm:flex-row">
-              <label for="newsletter" class="sr-only">Seu e-mail</label>
-              <input id="newsletter" name="email" type="email" placeholder="Digite seu e-mail"
-                class="field-input flex-1 border-transparent bg-white/95 text-slate-900" />
-              <button type="submit" class="btn btn-light">Inscreva-se</button>
-            </form>
-          </div>
-          <div class="lg:justify-self-end">
-            <p class="text-sm font-semibold uppercase tracking-wide text-indigo-300">Siga a Monte Ambiental</p>
-            <div class="mt-4 flex gap-3">
-              <a href="https://www.facebook.com/people/Monte-Ambiental/100084219861188/" aria-label="Facebook" class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-colors hover:bg-white/20"><i data-lucide="facebook" class="h-5 w-5"></i></a>
-              <a href="https://www.linkedin.com/company/monte-ambiental/" aria-label="LinkedIn" class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-colors hover:bg-white/20"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
-              <a href="https://www.instagram.com/monteambiental/" aria-label="Instagram" class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-colors hover:bg-white/20"><i data-lucide="instagram" class="h-5 w-5"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============================ FOOTER ============================ -->
-  <footer class="border-t border-slate-200 bg-white">
-    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <img src="images/logo2.png" alt="" class="h-8 w-8 rounded-lg object-contain" />
-        <span class="font-extrabold tracking-tight text-slate-900">Monte Ambiental</span>
-      </a>
-      <p class="text-sm text-slate-500">© 2023 Monte Ambiental. Todos os direitos reservados.</p>
-      <div class="flex gap-2 text-slate-400">
-        <a href="https://www.facebook.com/people/Monte-Ambiental/100084219861188/" aria-label="Facebook" class="transition-colors hover:text-indigo-600"><i data-lucide="facebook" class="h-5 w-5"></i></a>
-        <a href="https://www.linkedin.com/company/monte-ambiental/" aria-label="LinkedIn" class="transition-colors hover:text-indigo-600"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
-        <a href="https://www.instagram.com/monteambiental/" aria-label="Instagram" class="transition-colors hover:text-indigo-600"><i data-lucide="instagram" class="h-5 w-5"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="js/main.js"></script>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo">
+<div class="pf">
+<a class="marca" href="index.html"><img src="images/logo.png" alt="" width="24" height="24">Monte Ambiental</a>
+<nav class="nav" id="nav" aria-label="Principal"><a href="index.html">Início</a><a href="about.html">Sobre nós</a><a href="service.html">Serviços</a><a href="contact.html" aria-current="page">Contato</a></nav>
+<div class="topo-acoes">
+<button class="btn-tema" type="button" data-tema-btn aria-label="Alternar tema escuro"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg></button>
+<a class="btn-pri" href="https://api.whatsapp.com/send/?phone=%2B5582982010776">Fale conosco</a>
+<button class="btn-menu" type="button" data-menu aria-expanded="false" aria-controls="nav">Menu</button>
+</div>
+</div>
+</header>
+<main id="conteudo">
+<section class="hero hero--int"><div class="pf"><p class="meta">Contato</p>
+<h1>Conte o seu desafio ambiental</h1>
+<p class="lead">Respondemos com uma proposta sob medida para a sua empresa.</p></div></section>
+<section class="sec"><div class="pf"><div class="bento">
+<div class="tl tl--l2"><div class="tl-h"><h3>Envie uma mensagem</h3></div>
+<div id="aviso" role="status" hidden></div>
+<form class="form" action="contato.php" method="post">
+<div class="form-2"><div class="campo"><label for="nome">Nome</label><input id="nome" name="nome" type="text" autocomplete="name" required></div>
+<div class="campo"><label for="telefone">Telefone</label><input id="telefone" name="telefone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000"></div></div>
+<div class="campo"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+<div class="campo"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" required></textarea></div>
+<div class="hp" aria-hidden="true"><label>Não preencha<input name="site" tabindex="-1" autocomplete="off"></label></div>
+<button class="btn-pri btn-lg" type="submit">Enviar mensagem <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</form></div>
+<div class="tl tl--l2"><div class="tl-h"><h3>Canais</h3></div>
+<dl class="contato-lista"><dt>Telefone e WhatsApp</dt><dd><a href="https://api.whatsapp.com/send/?phone=%2B5582982010776">(82) 98201-0776</a></dd>
+<dt>E-mail</dt><dd><a href="mailto:comercial@monteambiental.com">comercial@monteambiental.com</a></dd></dl>
+<iframe class="mapa" title="Localização da Monte Ambiental no mapa" src="https://maps.google.com/maps?q=monte%20ambiental&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div></div></section>
+</main>
+<footer class="rodape">
+<div class="pf">
+<a class="marca" href="index.html"><img src="images/logo.png" alt="" width="24" height="24">Monte Ambiental</a>
+<nav class="rodape-links" aria-label="Redes sociais"><a href="https://www.facebook.com/people/Monte-Ambiental/100084219861188/" rel="noopener">Facebook</a><a href="https://www.linkedin.com/company/monte-ambiental/" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/monteambiental/" rel="noopener">Instagram</a></nav>
+<p>© <script>document.write(new Date().getFullYear())</script><noscript>2026</noscript> Monte Ambiental. Todos os direitos reservados.</p>
+</div>
+</footer>
+<div class="wa"><a class="btn-pri btn-lg" href="https://api.whatsapp.com/send/?phone=%2B5582982010776">WhatsApp</a></div>
+<script src="js/main.js" defer></script>
 </body>
-
 </html>

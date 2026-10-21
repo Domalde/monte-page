@@ -1,251 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description"
-    content="Serviços de consultoria ambiental da Monte Ambiental: licenciamento, estudos ambientais, PGRS, atendimento de condicionantes e projetos sanitários." />
-  <meta name="author" content="Monte Ambiental" />
-  <title>Serviços — Monte Ambiental</title>
-
-  <link rel="icon" href="images/logo.png" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/theme.config.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="css/theme.css" rel="stylesheet" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serviços | Monte Ambiental</title>
+<meta name="description" content="Licenciamento ambiental, estudos ambientais, gerenciamento de resíduos, condicionantes e projetos sanitários.">
+<meta name="theme-color" content="#09090B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Serviços | Monte Ambiental">
+<meta property="og:description" content="Licenciamento ambiental, estudos ambientais, gerenciamento de resíduos, condicionantes e projetos sanitários.">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-tema',t)}catch(e){}</script>
 </head>
-
-<body class="bg-slate-50 text-slate-900 antialiased">
-
-  <!-- ============================ HEADER ============================ -->
-  <header data-header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md transition-shadow">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <img src="images/logo2.png" alt="" class="h-9 w-9 rounded-lg object-contain" />
-        <span class="text-lg font-extrabold tracking-tight text-slate-900">Monte Ambiental</span>
-      </a>
-      <ul class="hidden items-center gap-9 lg:flex">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">Sobre Nós</a></li>
-        <li><a href="service.html" class="nav-link is-active">Serviços</a></li>
-        <li><a href="contact.html" class="nav-link">Contato</a></li>
-      </ul>
-      <div class="hidden lg:block">
-        <a href="https://api.whatsapp.com/send/?phone=%2B5582982010776" class="btn btn-primary">
-          Fale Conosco <i data-lucide="arrow-right" class="h-4 w-4"></i>
-        </a>
-      </div>
-      <button data-nav-toggle type="button" aria-expanded="false" aria-controls="mobile-menu"
-        aria-label="Abrir menu de navegação"
-        class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 text-slate-700 lg:hidden">
-        <i data-lucide="menu" class="h-5 w-5"></i>
-      </button>
-    </nav>
-    <div id="mobile-menu" data-nav-menu class="hidden border-t border-slate-200 bg-white px-4 py-4 lg:hidden">
-      <ul class="flex flex-col gap-1">
-        <li><a href="index.html" class="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-slate-50">Home</a></li>
-        <li><a href="about.html" class="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-slate-50">Sobre Nós</a></li>
-        <li><a href="service.html" class="block rounded-lg px-3 py-2.5 font-medium text-indigo-600 bg-indigo-50">Serviços</a></li>
-        <li><a href="contact.html" class="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-slate-50">Contato</a></li>
-        <li class="pt-2"><a href="https://api.whatsapp.com/send/?phone=%2B5582982010776" class="btn btn-primary w-full">Fale Conosco</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main>
-    <!-- ============================ PAGE HERO ============================ -->
-    <section class="relative overflow-hidden border-b border-slate-200 bg-white">
-      <div class="blob -left-24 -top-28 h-80 w-80 bg-indigo-200"></div>
-      <div class="blob right-0 -top-10 h-72 w-72 bg-violet-200 opacity-40"></div>
-      <div class="relative mx-auto max-w-7xl px-4 py-14 text-center sm:px-6 lg:py-20">
-        <span class="badge"><i data-lucide="layers" class="h-4 w-4"></i> O que fazemos</span>
-        <h1 class="mt-5 text-4xl font-extrabold tracking-headline text-slate-900 sm:text-5xl">
-          Nossos <span class="text-gradient">Serviços</span>
-        </h1>
-        <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-500">
-          Da licença à execução, cuidamos de cada etapa para manter o seu empreendimento
-          ambientalmente responsável e em conformidade.
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================ SERVICES GRID ============================ -->
-    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="card-soft group flex flex-col p-7">
-          <span class="feature-icon"><i data-lucide="clipboard-check" class="h-7 w-7"></i></span>
-          <h2 class="mt-5 text-lg font-semibold text-slate-900">Licenciamento Ambiental</h2>
-          <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-500">
-            Processo regulatório obrigatório para todo empreendimento ou atividade efetiva ou
-            potencialmente poluidora — conduzido do início ao fim pela nossa equipe.
-          </p>
-        </article>
-        <article class="card-soft group flex flex-col p-7">
-          <span class="feature-icon"><i data-lucide="microscope" class="h-7 w-7"></i></span>
-          <h2 class="mt-5 text-lg font-semibold text-slate-900">Estudos Ambientais</h2>
-          <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-500">
-            Elaboração conforme o potencial de impacto: Estudo Ambiental Simplificado (EAS),
-            Diagnóstico Ambiental (DA) e Estudo de Conformidade Ambiental (ECA).
-          </p>
-        </article>
-        <article class="card-soft group flex flex-col p-7">
-          <span class="feature-icon"><i data-lucide="recycle" class="h-7 w-7"></i></span>
-          <h2 class="mt-5 text-lg font-semibold text-slate-900">Gerenciamento de Resíduos (PGRS)</h2>
-          <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-500">
-            Plano que identifica a geração de cada tipo de resíduo e indica o manejo correto —
-            incluindo resíduos de serviço de saúde (PGRSS) e da construção civil (PGRCC).
-          </p>
-        </article>
-        <article class="card-soft group flex flex-col p-7">
-          <span class="feature-icon"><i data-lucide="list-checks" class="h-7 w-7"></i></span>
-          <h2 class="mt-5 text-lg font-semibold text-slate-900">Atendimento de Condicionantes</h2>
-          <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-500">
-            Obrigação imposta pelo licenciamento: a execução das medidas estabelecidas para mitigar
-            os impactos ambientais do empreendimento ou atividade.
-          </p>
-        </article>
-        <article class="card-soft group flex flex-col p-7">
-          <span class="feature-icon"><i data-lucide="droplets" class="h-7 w-7"></i></span>
-          <h2 class="mt-5 text-lg font-semibold text-slate-900">Projetos Sanitários</h2>
-          <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-500">
-            Projeto executivo e memorial descritivo do dimensionamento de Estações de Tratamento de
-            Água e Esgoto e de drenagem urbana.
-          </p>
-        </article>
-        <article class="group relative flex flex-col justify-between overflow-hidden rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 p-7 text-white shadow-button">
-          <div class="absolute -right-6 -top-6 h-28 w-28 rounded-full bg-white/10"></div>
-          <div class="relative">
-            <span class="flex h-14 w-14 items-center justify-center rounded-xl bg-white/15"><i data-lucide="sparkles" class="h-7 w-7"></i></span>
-            <h2 class="mt-5 text-lg font-semibold">Precisa de outra solução?</h2>
-            <p class="mt-3 text-sm leading-relaxed text-indigo-100">
-              Conte o seu desafio ambiental e desenhamos um serviço sob medida para a sua empresa.
-            </p>
-          </div>
-          <a href="contact.html" class="relative mt-6 inline-flex items-center gap-1.5 text-sm font-semibold">
-            Falar com um especialista <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============================ PROCESS ============================ -->
-    <section class="bg-white py-16 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <div class="mx-auto max-w-2xl text-center">
-          <span class="eyebrow">Como trabalhamos</span>
-          <h2 class="mt-3 text-3xl font-extrabold tracking-headline text-slate-900 sm:text-4xl">
-            Um processo claro, do diagnóstico à entrega
-          </h2>
-        </div>
-        <ol class="mt-14 grid gap-6 md:grid-cols-4">
-          <li class="card-soft p-7">
-            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 text-lg font-extrabold text-white shadow-glow">1</span>
-            <h3 class="mt-5 text-base font-semibold text-slate-900">Diagnóstico</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-500">Entendemos a atividade e mapeamos as exigências legais aplicáveis.</p>
-          </li>
-          <li class="card-soft p-7">
-            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 text-lg font-extrabold text-white shadow-glow">2</span>
-            <h3 class="mt-5 text-base font-semibold text-slate-900">Planejamento</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-500">Definimos estudos, documentos e o caminho mais eficiente para a sua licença.</p>
-          </li>
-          <li class="card-soft p-7">
-            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 text-lg font-extrabold text-white shadow-glow">3</span>
-            <h3 class="mt-5 text-base font-semibold text-slate-900">Execução</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-500">Elaboramos e protocolamos os estudos junto aos órgãos competentes.</p>
-          </li>
-          <li class="card-soft p-7">
-            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 text-lg font-extrabold text-white shadow-glow">4</span>
-            <h3 class="mt-5 text-base font-semibold text-slate-900">Acompanhamento</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-500">Monitoramos prazos e o atendimento das condicionantes ao longo do tempo.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============================ FAQ ============================ -->
-    <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-24">
-      <div class="text-center">
-        <span class="eyebrow">Dúvidas frequentes</span>
-        <h2 class="mt-3 text-3xl font-extrabold tracking-headline text-slate-900 sm:text-4xl">Perguntas comuns</h2>
-      </div>
-      <div class="mt-12 space-y-4">
-        <details class="card-soft p-0">
-          <summary class="flex items-center justify-between gap-4 p-6 text-base font-semibold text-slate-900">
-            O que é o licenciamento ambiental e quando ele é obrigatório?
-            <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 flex-none text-indigo-600"></i>
-          </summary>
-          <p class="px-6 pb-6 text-sm leading-relaxed text-slate-500">
-            É um processo regulatório obrigatório para todo empreendimento ou atividade efetiva ou
-            potencialmente poluidora. Avaliamos o seu caso e indicamos as licenças necessárias.
-          </p>
-        </details>
-        <details class="card-soft p-0">
-          <summary class="flex items-center justify-between gap-4 p-6 text-base font-semibold text-slate-900">
-            Quais estudos ambientais a Monte Ambiental elabora?
-            <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 flex-none text-indigo-600"></i>
-          </summary>
-          <p class="px-6 pb-6 text-sm leading-relaxed text-slate-500">
-            Elaboramos estudos conforme o potencial de impacto, como EAS, Diagnóstico Ambiental (DA)
-            e Estudo de Conformidade Ambiental (ECA), entre outros.
-          </p>
-        </details>
-        <details class="card-soft p-0">
-          <summary class="flex items-center justify-between gap-4 p-6 text-base font-semibold text-slate-900">
-            O PGRS cobre resíduos de saúde e da construção civil?
-            <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 flex-none text-indigo-600"></i>
-          </summary>
-          <p class="px-6 pb-6 text-sm leading-relaxed text-slate-500">
-            Sim. Além do PGRS, atendemos resíduos de serviço de saúde (PGRSS) e da construção civil
-            (PGRCC), indicando o manejo ambientalmente correto para cada tipo.
-          </p>
-        </details>
-      </div>
-    </section>
-
-    <!-- ============================ CTA ============================ -->
-    <section class="px-4 pb-16 sm:px-6 lg:pb-24">
-      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900 to-indigo-950 px-6 py-14 text-center sm:px-12 lg:py-20">
-        <div class="blob -right-16 -top-16 h-72 w-72 bg-indigo-500 opacity-40"></div>
-        <div class="blob -bottom-20 left-1/3 h-72 w-72 bg-violet-500 opacity-30"></div>
-        <div class="relative mx-auto max-w-2xl">
-          <h2 class="text-3xl font-extrabold tracking-headline text-white sm:text-4xl">
-            Pronto para começar o seu projeto?
-          </h2>
-          <p class="mt-4 text-lg text-indigo-200">
-            Conte o seu desafio ambiental e receba uma proposta sob medida para a sua empresa.
-          </p>
-          <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="https://api.whatsapp.com/send/?phone=%2B5582982010776" class="btn btn-light">Fale Conosco</a>
-            <a href="contact.html" class="btn btn-secondary border-white/20 bg-white/10 text-white hover:bg-white/20">Enviar mensagem</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============================ FOOTER ============================ -->
-  <footer class="border-t border-slate-200 bg-white">
-    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <img src="images/logo2.png" alt="" class="h-8 w-8 rounded-lg object-contain" />
-        <span class="font-extrabold tracking-tight text-slate-900">Monte Ambiental</span>
-      </a>
-      <p class="text-sm text-slate-500">© 2023 Monte Ambiental. Todos os direitos reservados.</p>
-      <div class="flex gap-2 text-slate-400">
-        <a href="https://www.facebook.com/people/Monte-Ambiental/100084219861188/" aria-label="Facebook" class="transition-colors hover:text-indigo-600"><i data-lucide="facebook" class="h-5 w-5"></i></a>
-        <a href="https://www.linkedin.com/company/monte-ambiental/" aria-label="LinkedIn" class="transition-colors hover:text-indigo-600"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
-        <a href="https://www.instagram.com/monteambiental/" aria-label="Instagram" class="transition-colors hover:text-indigo-600"><i data-lucide="instagram" class="h-5 w-5"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="js/main.js"></script>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo">
+<div class="pf">
+<a class="marca" href="index.html"><img src="images/logo.png" alt="" width="24" height="24">Monte Ambiental</a>
+<nav class="nav" id="nav" aria-label="Principal"><a href="index.html">Início</a><a href="about.html">Sobre nós</a><a href="service.html" aria-current="page">Serviços</a><a href="contact.html">Contato</a></nav>
+<div class="topo-acoes">
+<button class="btn-tema" type="button" data-tema-btn aria-label="Alternar tema escuro"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg></button>
+<a class="btn-pri" href="https://api.whatsapp.com/send/?phone=%2B5582982010776">Fale conosco</a>
+<button class="btn-menu" type="button" data-menu aria-expanded="false" aria-controls="nav">Menu</button>
+</div>
+</div>
+</header>
+<main id="conteudo">
+<section class="hero hero--int"><div class="pf"><p class="meta">Serviços</p>
+<h1>Da licença à execução, cada etapa em conformidade</h1>
+<p class="lead">Cinco frentes de atuação para manter o seu empreendimento ambientalmente responsável.</p></div></section>
+<section class="sec"><div class="pf"><div class="bento">
+<article class="tl tl--l2"><div class="tl-h"><h3>Licenciamento ambiental</h3><span class="meta">01</span></div><p class="tl-p">Processo regulatório obrigatório para todo empreendimento ou atividade efetiva ou potencialmente poluidora, conduzido do início ao fim pela nossa equipe.</p><div class="tl-sg"><span class="sigla">Licenças</span></div></article>
+<article class="tl"><div class="tl-h"><h3>Estudos ambientais</h3><span class="meta">02</span></div><p class="tl-p">Elaboração conforme o potencial de impacto.</p><div class="tl-sg"><span class="sigla">EAS</span><span class="sigla">DA</span><span class="sigla">ECA</span></div></article>
+<article class="tl"><div class="tl-h"><h3>Gerenciamento de resíduos</h3><span class="meta">03</span></div><p class="tl-p">Plano que identifica a geração de cada tipo de resíduo e indica o manejo correto.</p><div class="tl-sg"><span class="sigla">PGRS</span><span class="sigla">PGRSS</span><span class="sigla">PGRCC</span></div></article>
+<article class="tl tl--l2"><div class="tl-h"><h3>Atendimento de condicionantes</h3><span class="meta">04</span></div><p class="tl-p">Execução das medidas estabelecidas no licenciamento para mitigar os impactos ambientais do empreendimento ou atividade.</p></article>
+<article class="tl"><div class="tl-h"><h3>Projetos sanitários</h3><span class="meta">05</span></div><p class="tl-p">Projeto executivo e memorial descritivo do dimensionamento de Estações de Tratamento de Água e Esgoto e de drenagem urbana.</p><div class="tl-sg"><span class="sigla">ETA</span><span class="sigla">ETE</span><span class="sigla">Drenagem</span></div></article>
+<div class="tl tl--preto"><div class="tl-h"><h3>Outra solução?</h3></div><p class="tl-p">Conte o seu desafio e desenhamos um serviço sob medida.</p><div class="tl-pe"><a class="btn-pri" href="contact.html">Falar com a equipe</a></div></div>
+</div></div></section>
+<section class="sec"><div class="pf"><div class="sec-h"><h2>Como trabalhamos</h2></div><ol class="etapas" style="margin:0;padding:0;list-style:none">
+<li><div class="n">1</div><h3>Diagnóstico</h3><p>Entendemos a atividade e mapeamos as exigências legais aplicáveis.</p></li>
+<li><div class="n">2</div><h3>Planejamento</h3><p>Definimos estudos, documentos e o caminho mais eficiente para a licença.</p></li>
+<li><div class="n">3</div><h3>Execução</h3><p>Elaboramos e protocolamos os estudos junto aos órgãos competentes.</p></li>
+<li><div class="n">4</div><h3>Acompanhamento</h3><p>Monitoramos prazos e o atendimento das condicionantes.</p></li>
+</ol></div></section>
+<section class="sec"><div class="pf"><div class="sec-h"><h2>Perguntas frequentes</h2></div><div class="faq">
+<details><summary>O que é o licenciamento ambiental e quando ele é obrigatório?</summary><p>É um processo regulatório obrigatório para todo empreendimento ou atividade efetiva ou potencialmente poluidora. Avaliamos o seu caso e indicamos as licenças necessárias.</p></details>
+<details><summary>Quais estudos ambientais a Monte Ambiental elabora?</summary><p>Elaboramos estudos conforme o potencial de impacto, como Estudo Ambiental Simplificado (EAS), Diagnóstico Ambiental (DA) e Estudo de Conformidade Ambiental (ECA), entre outros.</p></details>
+<details><summary>O PGRS cobre resíduos de saúde e da construção civil?</summary><p>Além do PGRS, atendemos resíduos de serviço de saúde (PGRSS) e da construção civil (PGRCC), indicando o manejo ambientalmente correto para cada tipo.</p></details>
+</div></div></section>
+<section class="sec"><div class="pf"><div class="bento"><div class="tl tl--l4 tl--preto"><div class="tl-h"><h3>Pronto para começar o seu projeto?</h3></div><p class="tl-p">Conte o seu desafio ambiental e receba uma proposta sob medida.</p><div class="acoes"><a class="btn-pri" href="https://api.whatsapp.com/send/?phone=%2B5582982010776">Fale conosco <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></div></section>
+</main>
+<footer class="rodape">
+<div class="pf">
+<a class="marca" href="index.html"><img src="images/logo.png" alt="" width="24" height="24">Monte Ambiental</a>
+<nav class="rodape-links" aria-label="Redes sociais"><a href="https://www.facebook.com/people/Monte-Ambiental/100084219861188/" rel="noopener">Facebook</a><a href="https://www.linkedin.com/company/monte-ambiental/" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/monteambiental/" rel="noopener">Instagram</a></nav>
+<p>© <script>document.write(new Date().getFullYear())</script><noscript>2026</noscript> Monte Ambiental. Todos os direitos reservados.</p>
+</div>
+</footer>
+<div class="wa"><a class="btn-pri btn-lg" href="https://api.whatsapp.com/send/?phone=%2B5582982010776">WhatsApp</a></div>
+<script src="js/main.js" defer></script>
 </body>
-
 </html>

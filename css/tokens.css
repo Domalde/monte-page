@@ -1,0 +1,161 @@
+/* Alagoas Saneamento: tokens de design (cores, espaços, raios, sombras, movimento).
+   Carregue antes de base.css e do CSS da página. Direção de 15/10/2026 (DESIGN.md): neutros zinco,
+   um único azul de destaque (--acento) para link, foco e seleção, ação principal preta.
+   Modo escuro: segue o sistema (prefers-color-scheme) ou a escolha do botão de tema (data-tema em <html>);
+   inverte a escala de neutros; ver os blocos no fim. */
+:root{
+  color-scheme:light;
+  /* neutros (zinco) */
+  --n-0:#FFFFFF; --n-50:#FAFAFA; --n-100:#F4F4F5; --n-200:#E4E4E7; --n-300:#D4D4D8; --n-400:#A1A1AA;
+  --n-500:#71717A; --n-600:#52525B; --n-700:#3F3F46; --n-800:#27272A; --n-900:#18181B; --n-950:#09090B;
+
+  /* texto, bordas e destaque */
+  --txt:#18181B;        /* texto principal                 (17,7:1) */
+  --txt-2:#52525B;      /* texto de apoio                  ( 7,7:1) */
+  --txt-3:#71717A;      /* metadado curto, só sobre branco ( 4,8:1) */
+  --borda:#E4E4E7;      /* fio de bloco (decorativo) */
+  --borda-forte:#D4D4D8;
+  --acento:#2456D3;     /* única cor de destaque: link, foco, item selecionado (6,3:1) */
+  --acento-bg:#EEF3FD;
+
+  /* status semântico (texto sempre ≥ 4,5:1 sobre o próprio fundo) */
+  --st-ok-tx:#1F5C3A; --st-ok-bg:#F1F8F4; --st-ok-bd:#B9DCC6; --st-ok-cor:#3B8A5F;   /* meta atingida */
+  --st-at-tx:#7A4500; --st-at-bg:#FFF7EA; --st-at-bd:#F1D29B; --st-at-cor:#BF7A00;   /* atenção: abaixo da meta */
+  --st-cr-tx:#9B1C1C; --st-cr-bg:#FEF3F2; --st-cr-bd:#F5B9B4; --st-cr-cor:#D0342C;   /* crítico: só limite ou sanção do contrato */
+  --st-sd-tx:#52525B; --st-sd-bg:#F4F4F5; --st-sd-bd:#D4D4D8; --st-sd-cor:#A1A1AA;   /* sem meta ou sem dado */
+
+  /* operadoras: UMA cor por empresa em todos os mapas, tabelas e gráficos (contratos e relatórios).
+     Identificação, nunca avaliação nem cor de texto. Paleta validada para daltonismo (protan/deutan ΔE ≥ 8)
+     no claro e no escuro; a PPP Agreste usa o azul-claro da Casal. */
+  --op-brk:#3043A6; --op-conasa:#9F679A; --op-verde:#2E7A36; --op-casal:#36B4F3; --op-saae:#CF9743;
+
+  /* prestadoras nos relatórios (apontam para as operadoras) */
+  --prest-casal:var(--op-casal); --prest-brk:var(--op-brk); --prest-verde:var(--op-verde); --prest-conasa:var(--op-conasa); --prest-saae:var(--op-saae); --prest-outros:#A1A1AA;
+
+  /* contratos (apontam para a operadora de cada um). O JavaScript das páginas lê estes valores (getComputedStyle). */
+  --ct-a:var(--op-brk); --ct-b:var(--op-conasa); --ct-c:var(--op-verde); --ct-agreste:var(--op-casal); --ct-sanema:#c2410c; --ct-sanama:#be185d; --ct-sem:#A1A1AA;
+
+  /* séries de comparação nos gráficos (município × Alagoas × Brasil) */
+  --serie-al:#5B85E0; --serie-br:#A1A1AA; --serie-ne:#3B8A5F;
+
+  /* campos, divisórias e trilhos */
+  --campo-bd:#8A8A93;   /* borda de campo de formulário (3,4:1 sobre branco) */
+  --placeholder:#71717A;
+  --div:#F4F4F5;        /* divisória suave entre linhas */
+  --trilho:#E4E4E7;     /* fundo de barra */
+  --mapa-fundo:#FAFAFA;
+  --sem-dado:#D4D4D8;   /* município sem dado no mapa */
+  --veu:rgba(9,9,11,.55);   /* fundo escuro atrás de janelas */
+  --menu-tx:#52525B;    /* item do menu sobre o cabeçalho branco */
+
+  --toque:44px;
+  --raio:10px;
+
+  /* tipografia */
+  --font:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  /* --mono: metadados (fonte, data, rótulos, anos). Usa a mesma família do texto; o nome ficou por compatibilidade */
+  --mono:var(--font);
+  --code:ui-monospace,'SF Mono','Cascadia Mono','Segoe UI Mono',Consolas,monospace;   /* só para código: nomes de coluna, teclas */
+
+  /* marca (a logo continua com as cores próprias) */
+  --brand-navy:#0B3670; --brand-line:#5485E5; --brand-blue:#2E5FD6; --brand-cyan:#92C1FF;
+
+  /* nomes antigos: apontam para a paleta nova para que as páginas internas acompanhem sem reescrever o CSS */
+  --az-900:var(--n-950);   /* títulos e superfícies escuras */
+  --az-800:var(--n-800);   /* ação principal ao passar o mouse */
+  --az-700:var(--acento);  /* links e controles */
+  --az-500:var(--acento);  /* foco e realces */
+  --az-300:#B9CCF6;        /* realce sobre fundo escuro */
+  --az-100:var(--acento-bg);
+  --az-50:var(--n-50);     /* faixas e fundos de agrupamento */
+  --vd-700:var(--st-ok-tx);
+  --vd-100:var(--st-ok-bg);
+
+  /* superfícies e texto (nomes antigos) */
+  --bg-page:#FFFFFF; --panel:#FFFFFF; --panel-2:var(--n-50);
+  --ink:var(--txt); --ink-2:var(--n-700); --muted:var(--txt-2);
+  --line:var(--borda); --line-strong:var(--borda-forte);
+
+  /* ação e estados */
+  --accent:var(--n-950); --accent-d:var(--n-950); --focus:var(--acento);
+  --ok:var(--st-ok-tx); --warn:var(--st-at-tx); --hl:#FFE7A3;   /* --hl: trecho encontrado na busca */
+
+  /* escala de espaço (4/8/12/16/24/32/48) */
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px; --sp-6:32px; --sp-7:48px;
+
+  /* raios: blocos / botões / controles / pílulas */
+  --radius:8px; --radius-sm:6px; --radius-pill:999px;
+
+  /* sombras: só em camada flutuante (lista da busca, dica, menu, janela); luz de cima, tom neutro */
+  --shadow:0 1px 2px rgba(9,9,11,.06),0 4px 12px -4px rgba(9,9,11,.08);
+  --shadow-bar:0 1px 0 rgba(9,9,11,.06);
+  --shadow-pop:0 12px 32px -6px rgba(9,9,11,.18),0 0 0 1px rgba(9,9,11,.06);
+  --shadow-modal:0 24px 56px -8px rgba(9,9,11,.32);
+
+  /* superfície escura fixa (igual nos dois modos): dica, balão do mapa, aviso de cookies, link de pular */
+  --escuro-fixo:#18181B; --escuro-fixo-bd:rgba(255,255,255,.14);
+  /* cabeçalho translúcido */
+  --cabecalho:rgba(255,255,255,.92); --cabecalho-vidro:rgba(255,255,255,.8);
+
+  /* camadas: escala curta; um número novo só entra aqui */
+  --z-base:1; --z-dropdown:10; --z-sticky:20; --z-overlay:30; --z-toast:40; --z-tooltip:50; --z-skip:60;
+
+  /* movimento */
+  --dur:180ms; --ease:cubic-bezier(.2,.6,.2,1);
+
+  /* alturas das barras fixas: definidas em assets/css/bars.css e medidas por assets/js/bars.js */
+}
+
+/* ===================== modo escuro =====================
+   A escala de neutros inverte (--n-0 vira o mais escuro e --n-950 o mais claro): quem usa --n-950 para
+   ênfase e --n-0 para "texto sobre ênfase" funciona nos dois modos sem regra própria.
+   Status e destaque ganham versões claras sobre fundo escuro (texto ≥ 4,5:1). */
+@media(prefers-color-scheme:dark){
+  :root:not([data-tema="claro"]){
+    color-scheme:dark;
+    --op-brk:#3458AC; --op-conasa:#A86FA3; --op-verde:#3F7F45; --op-casal:#0D9AEC; --op-saae:#C58501;   /* operadoras no escuro */
+    --n-0:#09090B; --n-50:#121214; --n-100:#18181B; --n-200:#27272A; --n-300:#3F3F46; --n-400:#52525B;
+    --n-500:#71717A; --n-600:#A1A1AA; --n-700:#D4D4D8; --n-800:#E4E4E7; --n-900:#F4F4F5; --n-950:#FAFAFA;
+    --txt:#F4F4F5; --txt-2:#A1A1AA; --txt-3:#8E8E97;
+    --borda:#27272A; --borda-forte:#3F3F46;
+    --acento:#7FA3F5; --acento-bg:#172447;
+    --st-ok-tx:#8FD3AC; --st-ok-bg:#10281B; --st-ok-bd:#245A3C; --st-ok-cor:#4FAE7A;
+    --st-at-tx:#F2C46D; --st-at-bg:#2B1F07; --st-at-bd:#6B4A0E; --st-at-cor:#D99A1E;
+    --st-cr-tx:#F5A9A5; --st-cr-bg:#2C1313; --st-cr-bd:#6E2A27; --st-cr-cor:#E05A52;
+    --st-sd-tx:#A1A1AA; --st-sd-bg:#1C1C1F; --st-sd-bd:#3F3F46; --st-sd-cor:#71717A;
+    --campo-bd:#71717A; --placeholder:#8E8E97;
+    --div:#1E1E21; --trilho:#27272A; --mapa-fundo:#121214; --sem-dado:#3F3F46;
+    --veu:rgba(0,0,0,.7); --menu-tx:#A1A1AA; --hl:#5A4710;
+    --az-300:#9DB7F2;
+    --bg-page:#09090B; --panel:#0F0F11;
+    --cabecalho:rgba(9,9,11,.9); --cabecalho-vidro:rgba(9,9,11,.75);
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 4px 12px -4px rgba(0,0,0,.6);
+    --shadow-bar:0 1px 0 rgba(255,255,255,.06);
+    --shadow-pop:0 12px 32px -6px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.08);
+    --shadow-modal:0 24px 56px -8px rgba(0,0,0,.8);
+  }
+}
+/* escolha manual no botão de tema (ui.js grava data-tema="claro" ou "escuro" em <html>) */
+:root[data-tema="escuro"]{
+  color-scheme:dark;
+  --op-brk:#3458AC; --op-conasa:#A86FA3; --op-verde:#3F7F45; --op-casal:#0D9AEC; --op-saae:#C58501;   /* operadoras no escuro */
+  --n-0:#09090B; --n-50:#121214; --n-100:#18181B; --n-200:#27272A; --n-300:#3F3F46; --n-400:#52525B;
+  --n-500:#71717A; --n-600:#A1A1AA; --n-700:#D4D4D8; --n-800:#E4E4E7; --n-900:#F4F4F5; --n-950:#FAFAFA;
+  --txt:#F4F4F5; --txt-2:#A1A1AA; --txt-3:#8E8E97;
+  --borda:#27272A; --borda-forte:#3F3F46;
+  --acento:#7FA3F5; --acento-bg:#172447;
+  --st-ok-tx:#8FD3AC; --st-ok-bg:#10281B; --st-ok-bd:#245A3C; --st-ok-cor:#4FAE7A;
+  --st-at-tx:#F2C46D; --st-at-bg:#2B1F07; --st-at-bd:#6B4A0E; --st-at-cor:#D99A1E;
+  --st-cr-tx:#F5A9A5; --st-cr-bg:#2C1313; --st-cr-bd:#6E2A27; --st-cr-cor:#E05A52;
+  --st-sd-tx:#A1A1AA; --st-sd-bg:#1C1C1F; --st-sd-bd:#3F3F46; --st-sd-cor:#71717A;
+  --campo-bd:#71717A; --placeholder:#8E8E97;
+  --div:#1E1E21; --trilho:#27272A; --mapa-fundo:#121214; --sem-dado:#3F3F46;
+  --veu:rgba(0,0,0,.7); --menu-tx:#A1A1AA; --hl:#5A4710;
+  --az-300:#9DB7F2;
+  --bg-page:#09090B; --panel:#0F0F11;
+  --cabecalho:rgba(9,9,11,.9); --cabecalho-vidro:rgba(9,9,11,.75);
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 4px 12px -4px rgba(0,0,0,.6);
+  --shadow-bar:0 1px 0 rgba(255,255,255,.06);
+  --shadow-pop:0 12px 32px -6px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.08);
+  --shadow-modal:0 24px 56px -8px rgba(0,0,0,.8);
+}
